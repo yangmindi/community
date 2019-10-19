@@ -75,6 +75,22 @@ body{
     color: #499ef3;
 }
 
+.question-tag{
+    margin-right: 5px;
+}
+
+.question-wechat{
+    width: 100%;
+}
+
+.question-related{
+    line-height: 20px;
+    font-size: 12px;
+    margin-left: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
 .sub-comments{
     border-radius: 5px;
     margin-top: 10px;
