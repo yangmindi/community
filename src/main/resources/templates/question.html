@@ -38,7 +38,7 @@
                     <textarea style="display: none" th:text="${question.description}"></textarea>
                 </div>
                 <script type="text/javascript">
-                    $(function() {
+                    $(function () {
                         editormd.markdownToHTML("question-view", {});
                     });
                 </script>
@@ -160,14 +160,14 @@
                 </div>
             </div>
 
-<!--            微信号-->
+            <!--            微信号-->
             <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h4>扫描二维码即可加小哥哥微信哦~</h4>
                 <img class="img-thumbnail question-wechat" src="/images/wechat.png">
             </div>
 
-<!--            相关问题-->
+            <!--            相关问题-->
             <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h4>相关问题</h4>
@@ -180,6 +180,6 @@
         </div>
     </div>
 </div>
-</div>
+<div th:insert="~{footer :: foot}"></div>
 </body>
 </html>
