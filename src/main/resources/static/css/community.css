@@ -40,6 +40,11 @@ body{
     padding: 0 0 15px 0;
 }
 
+.picture{
+    text-align: center;
+    padding-top: 10px;
+}
+
 .question-title{
     margin-top: 25px;
 }

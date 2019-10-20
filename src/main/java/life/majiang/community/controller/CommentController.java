@@ -8,6 +8,7 @@ import life.majiang.community.exception.CustomizeErrorCode;
 import life.majiang.community.model.Comment;
 import life.majiang.community.model.User;
 import life.majiang.community.service.CommentService;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
+@Slf4j
 public class CommentController {
 
     @Autowired
@@ -28,10 +30,12 @@ public class CommentController {
                        HttpServletRequest request){
         User user = (User)request.getSession().getAttribute("user");
         if(user == null){
+            log.error("post get github error,{}",user);
             return ResultDTO.errorOf(CustomizeErrorCode.NO_LOGIN);
         }
 
         if(commentCreateDTO == null || StringUtils.isBlank(commentCreateDTO.getContent())){
+            log.error("post get github error,{}",commentCreateDTO);
             return ResultDTO.errorOf(CustomizeErrorCode.CONTENT_IS_EMPTY);
         }
 

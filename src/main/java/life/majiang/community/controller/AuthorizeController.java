@@ -6,6 +6,7 @@ import life.majiang.community.mapper.UserMapper;
 import life.majiang.community.model.User;
 import life.majiang.community.provider.GithubProvider;
 import life.majiang.community.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,7 @@ import java.text.CollationKey;
 import java.util.UUID;
 
 @Controller
+@Slf4j
 public class AuthorizeController {
 
     @Autowired
@@ -30,7 +32,7 @@ public class AuthorizeController {
     @Value("${github.client_secret}")
     private String clientSecret;
 
-    @Value("${github.client.uri}")
+    @Value("${github.redirect.uri}")
     private String redirectUri;
 
 
@@ -68,6 +70,7 @@ public class AuthorizeController {
 //            request.getSession().setAttribute("user",user);//银行账户创建成功
             return "redirect:/";//跳转到index页面
         }else {
+            log.error("callback get github error,{}",githubUser);
             //登陆失败，重新登陆
             return "redirect:/";
         }
