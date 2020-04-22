@@ -129,7 +129,7 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.2.4</version>
                 <configuration>
-                    <url>jdbc:mysql://172.21.0.11:3306/mawen</url>
+                    <url>jdbc:mysql://cdb-9ath0xl6.bj.tencentcdb.com:10203/mawen</url>
                     <user>root</user>
                     <password>qwer5482</password>
                 </configuration>
