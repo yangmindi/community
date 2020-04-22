@@ -75,6 +75,16 @@
             <version>1.2.57</version>
         </dependency>
 
+
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.16</version>
+        </dependency>
+
+
+
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -119,11 +129,17 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>5.2.4</version>
                 <configuration>
-                    <url>jdbc:h2:~/community</url>
-                    <user>sa</user>
-                    <password>123</password>
+                    <url>jdbc:mysql://cdb-9ath0xl6.bj.tencentcdb.com:10203/mawen</url>
+                    <user>root</user>
+                    <password>qwer5482</password>
                 </configuration>
                 <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>8.0.16</version>
+                    </dependency>
+
                     <dependency>
                         <groupId>com.h2database</groupId>
                         <artifactId>h2</artifactId>
