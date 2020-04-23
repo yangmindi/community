@@ -12,23 +12,23 @@ public class TagCache {
     public static List<TagDTO> get(){
         List<TagDTO> tagDTOS = new ArrayList<>();
         TagDTO program = new TagDTO();
-        program.setCategoryName("开发语言");
-        program.setTags(Arrays.asList("javscript","php","css","html","html5","java","ode.js","python","c++","c","golang","objetive-c","typscript","shell","swift","c#","sass","ruby","bash","less","sp.net","lua","scala","coffescript","actioscript","rust","erlang","perl"));
+        program.setCategoryName("经验分享");
+        program.setTags(Arrays.asList("考研","保研","考证","实习","工作","出国留学","考公务员"));
         tagDTOS.add(program);
 
         TagDTO framwork = new TagDTO();
-        framwork.setCategoryName("平台框架");
-        framwork.setTags(Arrays.asList("laravel","spring","express","django","flask","yii","ruby-on-rails","tornado","koa","struts"));
+        framwork.setCategoryName("资料分享");
+        framwork.setTags(Arrays.asList("课堂笔记","考研资料"));
         tagDTOS.add(framwork);
 
         TagDTO server = new TagDTO();
-        server.setCategoryName("服务器");
-        server.setTags(Arrays.asList("linux","nginx","docker","apache","ubuntu","centos","缓存 tomcat","负载均衡","unix","hadoop","windows-server"));
+        server.setCategoryName("主题讨论");
+        server.setTags(Arrays.asList("考研讨论","保研讨论","考证讨论","实习讨论","工作讨论","出国留学讨论","考公务员讨论","课堂笔记讨论","考研资料讨论"));
         tagDTOS.add(server);
 
         TagDTO db = new TagDTO();
-        db.setCategoryName("数据库");
-        db.setTags(Arrays.asList("mysql","redis","mongodb","sql","oracle","nosql","memcached","sqlserver","postgresql","sqlite"));
+        db.setCategoryName("职业内推");
+        db.setTags(Arrays.asList("内推信息"));
         tagDTOS.add(db);
         return tagDTOS;
    }
